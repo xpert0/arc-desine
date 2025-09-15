@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="excellenceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 4l6 12h12l-10 8 4 12-12-8-12 8 4-12-10-8h12z" stroke="url(#excellenceGradient)" stroke-width="2" fill="none"/>
+  <circle cx="24" cy="20" r="3" fill="url(#excellenceGradient)"/>
+</svg>

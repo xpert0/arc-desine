@@ -1,0 +1,193 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sky gradient matching reference image exactly -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dda0dd;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#d8bfd8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#da70d6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#ba55d3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b008b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Mountain layer gradients for depth -->
+    <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4b0082;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2e004e;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#663399;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#4b0082;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <linearGradient id="mountain3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8a2be2;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#663399;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <linearGradient id="mountain4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9932cc;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)"/>
+  
+  <!-- Farthest mountains (most distant, lightest) -->
+  <path d="M0,300 Q240,280 480,300 Q720,290 960,295 Q1200,290 1440,300 Q1680,295 1920,290 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain4)" opacity="0.4"/>
+  
+  <!-- Fourth layer mountains -->
+  <path d="M0,350 Q200,330 400,345 Q600,355 800,340 Q1000,335 1200,350 Q1400,345 1600,340 Q1800,335 1920,345 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain3)" opacity="0.5"/>
+  
+  <!-- Third layer mountains -->
+  <path d="M0,400 Q180,380 360,395 Q540,405 720,390 Q900,385 1080,400 Q1260,395 1440,390 Q1620,385 1800,395 Q1860,390 1920,395 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain2)" opacity="0.6"/>
+  
+  <!-- Second layer mountains -->
+  <path d="M0,450 Q150,430 300,445 Q450,455 600,440 Q750,435 900,450 Q1050,445 1200,440 Q1350,435 1500,445 Q1650,440 1800,445 Q1860,440 1920,445 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain1)" opacity="0.7"/>
+  
+  <!-- Front layer mountains -->
+  <path d="M0,500 Q120,480 240,495 Q360,505 480,490 Q600,485 720,500 Q840,495 960,490 Q1080,485 1200,495 Q1320,490 1440,495 Q1560,490 1680,495 Q1800,490 1920,495 L1920,1080 L0,1080 Z" 
+        fill="#2e004e" opacity="0.8"/>
+
+  <!-- Forest silhouettes - Back layer -->
+  <g fill="#1a0029" opacity="0.6">
+    <!-- Scattered pine trees across the horizon -->
+    <polygon points="80,580 100,480 120,580"/>
+    <polygon points="150,590 170,490 190,590"/>
+    <polygon points="220,585 240,485 260,585"/>
+    <polygon points="290,580 310,480 330,580"/>
+    <polygon points="360,590 380,490 400,590"/>
+    <polygon points="430,585 450,485 470,585"/>
+    <polygon points="500,580 520,480 540,580"/>
+    <polygon points="570,590 590,490 610,590"/>
+    <polygon points="640,585 660,485 680,585"/>
+    <polygon points="710,580 730,480 750,580"/>
+    <polygon points="780,590 800,490 820,590"/>
+    <polygon points="850,585 870,485 890,585"/>
+    <polygon points="920,580 940,480 960,580"/>
+    <polygon points="990,590 1010,490 1030,590"/>
+    <polygon points="1060,585 1080,485 1100,585"/>
+    <polygon points="1130,580 1150,480 1170,580"/>
+    <polygon points="1200,590 1220,490 1240,590"/>
+    <polygon points="1270,585 1290,485 1310,585"/>
+    <polygon points="1340,580 1360,480 1380,580"/>
+    <polygon points="1410,590 1430,490 1450,590"/>
+    <polygon points="1480,585 1500,485 1520,585"/>
+    <polygon points="1550,580 1570,480 1590,580"/>
+    <polygon points="1620,590 1640,490 1660,590"/>
+    <polygon points="1690,585 1710,485 1730,585"/>
+    <polygon points="1760,580 1780,480 1800,580"/>
+    <polygon points="1830,590 1850,490 1870,590"/>
+  </g>
+  
+  <!-- Forest silhouettes - Middle layer -->
+  <g fill="#0d0015" opacity="0.8">
+    <!-- Denser, taller pine trees -->
+    <polygon points="40,650 65,450 90,650"/>
+    <polygon points="110,660 135,460 160,660"/>
+    <polygon points="180,655 205,455 230,655"/>
+    <polygon points="250,650 275,450 300,650"/>
+    <polygon points="320,660 345,460 370,660"/>
+    <polygon points="390,655 415,455 440,655"/>
+    <polygon points="460,650 485,450 510,650"/>
+    <polygon points="530,660 555,460 580,660"/>
+    <polygon points="600,655 625,455 650,655"/>
+    <polygon points="670,650 695,450 720,650"/>
+    <polygon points="740,660 765,460 790,660"/>
+    <polygon points="810,655 835,455 860,655"/>
+    <polygon points="880,650 905,450 930,650"/>
+    <polygon points="950,660 975,460 1000,660"/>
+    <polygon points="1020,655 1045,455 1070,655"/>
+    <polygon points="1090,650 1115,450 1140,650"/>
+    <polygon points="1160,660 1185,460 1210,660"/>
+    <polygon points="1230,655 1255,455 1280,655"/>
+    <polygon points="1300,650 1325,450 1350,650"/>
+    <polygon points="1370,660 1395,460 1420,660"/>
+    <polygon points="1440,655 1465,455 1490,655"/>
+    <polygon points="1510,650 1535,450 1560,650"/>
+    <polygon points="1580,660 1605,460 1630,660"/>
+    <polygon points="1650,655 1675,455 1700,655"/>
+    <polygon points="1720,650 1745,450 1770,650"/>
+    <polygon points="1790,660 1815,460 1840,660"/>
+    <polygon points="1860,655 1885,455 1910,655"/>
+  </g>
+  
+  <!-- Forest silhouettes - Front layer (solid black) -->
+  <g fill="#000000" opacity="1">
+    <!-- Very tall, dense pine forest in foreground -->
+    <polygon points="0,720 25,420 50,720"/>
+    <polygon points="30,730 55,430 80,730"/>
+    <polygon points="60,725 85,425 110,725"/>
+    <polygon points="90,720 115,420 140,720"/>
+    <polygon points="120,730 145,430 170,730"/>
+    <polygon points="150,725 175,425 200,725"/>
+    <polygon points="180,720 205,420 230,720"/>
+    <polygon points="210,730 235,430 260,730"/>
+    <polygon points="240,725 265,425 290,725"/>
+    <polygon points="270,720 295,420 320,720"/>
+    <polygon points="300,730 325,430 350,730"/>
+    <polygon points="330,725 355,425 380,725"/>
+    <polygon points="360,720 385,420 410,720"/>
+    <polygon points="390,730 415,430 440,730"/>
+    <polygon points="420,725 445,425 470,725"/>
+    <polygon points="450,720 475,420 500,720"/>
+    <polygon points="480,730 505,430 530,730"/>
+    <polygon points="510,725 535,425 560,725"/>
+    <polygon points="540,720 565,420 590,720"/>
+    <polygon points="570,730 595,430 620,730"/>
+    <polygon points="600,725 625,425 650,725"/>
+    <polygon points="630,720 655,420 680,720"/>
+    <polygon points="660,730 685,430 710,730"/>
+    <polygon points="690,725 715,425 740,725"/>
+    <polygon points="720,720 745,420 770,720"/>
+    <polygon points="750,730 775,430 800,730"/>
+    <polygon points="780,725 805,425 830,725"/>
+    <polygon points="810,720 835,420 860,720"/>
+    <polygon points="840,730 865,430 890,730"/>
+    <polygon points="870,725 895,425 920,725"/>
+    <polygon points="900,720 925,420 950,720"/>
+    <polygon points="930,730 955,430 980,730"/>
+    <polygon points="960,725 985,425 1010,725"/>
+    <polygon points="990,720 1015,420 1040,720"/>
+    <polygon points="1020,730 1045,430 1070,730"/>
+    <polygon points="1050,725 1075,425 1100,725"/>
+    <polygon points="1080,720 1105,420 1130,720"/>
+    <polygon points="1110,730 1135,430 1160,730"/>
+    <polygon points="1140,725 1165,425 1190,725"/>
+    <polygon points="1170,720 1195,420 1220,720"/>
+    <polygon points="1200,730 1225,430 1250,730"/>
+    <polygon points="1230,725 1255,425 1280,725"/>
+    <polygon points="1260,720 1285,420 1310,720"/>
+    <polygon points="1290,730 1315,430 1340,730"/>
+    <polygon points="1320,725 1345,425 1370,725"/>
+    <polygon points="1350,720 1375,420 1400,720"/>
+    <polygon points="1380,730 1405,430 1430,730"/>
+    <polygon points="1410,725 1435,425 1460,725"/>
+    <polygon points="1440,720 1465,420 1490,720"/>
+    <polygon points="1470,730 1495,430 1520,730"/>
+    <polygon points="1500,725 1525,425 1550,725"/>
+    <polygon points="1530,720 1555,420 1580,720"/>
+    <polygon points="1560,730 1585,430 1610,730"/>
+    <polygon points="1590,725 1615,425 1640,725"/>
+    <polygon points="1620,720 1645,420 1670,720"/>
+    <polygon points="1650,730 1675,430 1700,730"/>
+    <polygon points="1680,725 1705,425 1730,725"/>
+    <polygon points="1710,720 1735,420 1760,720"/>
+    <polygon points="1740,730 1765,430 1790,730"/>
+    <polygon points="1770,725 1795,425 1820,725"/>
+    <polygon points="1800,720 1825,420 1850,720"/>
+    <polygon points="1830,730 1855,430 1880,730"/>
+    <polygon points="1860,725 1885,425 1910,725"/>
+    <polygon points="1890,720 1915,420 1920,720 1920,1080 1890,1080"/>
+  </g>
+  
+  <!-- Ground/Hill base - solid black -->
+  <path d="M0,700 Q240,680 480,700 Q720,720 960,700 Q1200,680 1440,700 Q1680,720 1920,700 L1920,1080 L0,1080 Z" 
+        fill="#000000" opacity="1"/>
+        
+</svg>
