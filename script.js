@@ -9,10 +9,103 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormValidation();
     initImageLazyLoading();
     initPortfolioFilter();
+    initParallaxEffects();
+    initHeaderScrollEffect();
     
     // Add loading state management
     document.body.classList.add('loaded');
+    
+    // Add fade-in animation to elements
+    addFadeInAnimations();
 });
+
+// ===== ENHANCED SCROLL EFFECTS ===== 
+function initHeaderScrollEffect() {
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Hide/show header on scroll direction
+        if (scrollY > lastScrollY && scrollY > 200) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollY = scrollY;
+    });
+}
+
+// ===== FADE-IN ANIMATIONS ===== 
+function addFadeInAnimations() {
+    // Add fade-in class to main content sections
+    const elementsToAnimate = document.querySelectorAll(`
+        .hero-content, .service-item, .portfolio-item, 
+        .about-content, .team-member, .stats-item,
+        .contact-method, .form-group, .section-title
+    `);
+    
+    elementsToAnimate.forEach((element, index) => {
+        element.classList.add('fade-in');
+        element.style.animationDelay = `${index * 0.1}s`;
+    });
+}
+
+// ===== PARALLAX EFFECTS ===== 
+function initParallaxEffects() {
+    const parallaxElements = document.querySelectorAll('.floating, .hero-visual');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        parallaxElements.forEach(element => {
+            element.style.transform = `translateY(${rate}px)`;
+        });
+    });
+}
+
+// ===== ENHANCED ANIMATION ON SCROLL ===== 
+function initAnimationOnScroll() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Add staggered animation for child elements
+                const children = entry.target.querySelectorAll('.fade-in:not(.visible)');
+                children.forEach((child, index) => {
+                    setTimeout(() => {
+                        child.classList.add('visible');
+                    }, index * 100);
+                });
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements with fade-in class
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Observe sections for enhanced effects
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+}
 
 // ===== PORTFOLIO FILTER ===== 
 function initPortfolioFilter() {
