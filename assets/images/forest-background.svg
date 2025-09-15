@@ -1,0 +1,105 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sky gradient similar to reference image -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#c44569;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#6c5ce7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3436;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Mountain layers gradient -->
+    <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3436;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3436;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <linearGradient id="mountain3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#636e72;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#2d3436;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)"/>
+  
+  <!-- Distant mountains (lightest) -->
+  <path d="M0,400 Q200,350 400,380 T800,360 Q1000,340 1200,370 T1600,350 Q1800,330 1920,360 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain3)" opacity="0.6"/>
+  
+  <!-- Middle mountains -->
+  <path d="M0,450 Q150,420 300,440 Q450,460 600,430 Q750,400 900,420 Q1050,440 1200,410 Q1350,380 1500,400 Q1650,420 1800,390 Q1860,380 1920,385 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain2)" opacity="0.7"/>
+  
+  <!-- Front mountains -->
+  <path d="M0,500 Q100,480 200,500 Q300,520 400,490 Q500,460 600,480 Q700,500 800,470 Q900,440 1000,460 Q1100,480 1200,450 Q1300,420 1400,440 Q1500,460 1600,430 Q1700,400 1800,420 Q1860,430 1920,425 L1920,1080 L0,1080 Z" 
+        fill="url(#mountain1)" opacity="0.8"/>
+  
+  <!-- Forest silhouettes -->
+  
+  <!-- Back tree line -->
+  <g fill="#000000" opacity="0.7">
+    <!-- Pine trees scattered across -->
+    <polygon points="50,600 70,500 90,600" transform="scale(1,1.5)"/>
+    <polygon points="120,620 140,520 160,620" transform="scale(1,1.3)"/>
+    <polygon points="200,610 220,510 240,610" transform="scale(1,1.4)"/>
+    <polygon points="280,600 300,500 320,600" transform="scale(1,1.6)"/>
+    <polygon points="380,590 400,490 420,590" transform="scale(1,1.2)"/>
+    <polygon points="480,600 500,500 520,600" transform="scale(1,1.5)"/>
+    <polygon points="580,580 600,480 620,580" transform="scale(1,1.7)"/>
+    <polygon points="680,590 700,490 720,590" transform="scale(1,1.3)"/>
+    <polygon points="780,600 800,500 820,600" transform="scale(1,1.4)"/>
+    <polygon points="880,580 900,480 920,580" transform="scale(1,1.6)"/>
+    <polygon points="980,590 1000,490 1020,590" transform="scale(1,1.2)"/>
+    <polygon points="1080,600 1100,500 1120,600" transform="scale(1,1.5)"/>
+    <polygon points="1180,580 1200,480 1220,580" transform="scale(1,1.7)"/>
+    <polygon points="1280,590 1300,490 1320,590" transform="scale(1,1.3)"/>
+    <polygon points="1380,600 1400,500 1420,600" transform="scale(1,1.4)"/>
+    <polygon points="1480,580 1500,480 1520,580" transform="scale(1,1.6)"/>
+    <polygon points="1580,590 1600,490 1620,590" transform="scale(1,1.2)"/>
+    <polygon points="1680,600 1700,500 1720,600" transform="scale(1,1.5)"/>
+    <polygon points="1780,580 1800,480 1820,580" transform="scale(1,1.7)"/>
+  </g>
+  
+  <!-- Front tree line (darker, taller) -->
+  <g fill="#000000" opacity="0.9">
+    <!-- Tall pine trees -->
+    <polygon points="25,700 45,400 65,700" transform="scale(1,1.8)"/>
+    <polygon points="95,720 115,420 135,720" transform="scale(1,1.6)"/>
+    <polygon points="165,710 185,410 205,710" transform="scale(1,1.7)"/>
+    <polygon points="235,700 255,400 275,700" transform="scale(1,1.9)"/>
+    <polygon points="305,690 325,390 345,690" transform="scale(1,1.5)"/>
+    <polygon points="375,700 395,400 415,700" transform="scale(1,1.8)"/>
+    <polygon points="445,680 465,380 485,680" transform="scale(1,2.0)"/>
+    <polygon points="515,690 535,390 555,690" transform="scale(1,1.6)"/>
+    <polygon points="585,700 605,400 625,700" transform="scale(1,1.7)"/>
+    <polygon points="655,680 675,380 695,680" transform="scale(1,1.9)"/>
+    <polygon points="725,690 745,390 765,690" transform="scale(1,1.5)"/>
+    <polygon points="795,700 815,400 835,700" transform="scale(1,1.8)"/>
+    <polygon points="865,680 885,380 905,680" transform="scale(1,2.0)"/>
+    <polygon points="935,690 955,390 975,690" transform="scale(1,1.6)"/>
+    <polygon points="1005,700 1025,400 1045,700" transform="scale(1,1.7)"/>
+    <polygon points="1075,680 1095,380 1115,680" transform="scale(1,1.9)"/>
+    <polygon points="1145,690 1165,390 1185,690" transform="scale(1,1.5)"/>
+    <polygon points="1215,700 1235,400 1255,700" transform="scale(1,1.8)"/>
+    <polygon points="1285,680 1305,380 1325,680" transform="scale(1,2.0)"/>
+    <polygon points="1355,690 1375,390 1395,690" transform="scale(1,1.6)"/>
+    <polygon points="1425,700 1445,400 1465,700" transform="scale(1,1.7)"/>
+    <polygon points="1495,680 1515,380 1535,680" transform="scale(1,1.9)"/>
+    <polygon points="1565,690 1585,390 1605,690" transform="scale(1,1.5)"/>
+    <polygon points="1635,700 1655,400 1675,700" transform="scale(1,1.8)"/>
+    <polygon points="1705,680 1725,380 1745,680" transform="scale(1,2.0)"/>
+    <polygon points="1775,690 1795,390 1815,690" transform="scale(1,1.6)"/>
+    <polygon points="1845,700 1865,400 1885,700" transform="scale(1,1.7)"/>
+  </g>
+  
+  <!-- Ground/Hill base -->
+  <path d="M0,650 Q200,630 400,650 Q600,670 800,650 Q1000,630 1200,650 Q1400,670 1600,650 Q1800,630 1920,650 L1920,1080 L0,1080 Z" 
+        fill="#000000" opacity="1"/>
+        
+</svg>
