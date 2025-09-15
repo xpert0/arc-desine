@@ -28,7 +28,6 @@
     --glass-active: rgba(255, 215, 0, 0.1);
     
     /* Forest Background */
-    --forest-bg: url('../assets/images/forest-background.svg');
     --overlay-dark: rgba(0, 0, 0, 0.3);
     
     /* Typography - Times New Roman Focus */
@@ -66,23 +65,35 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
     color: var(--text-primary);
-    background: var(--forest-bg) center center / cover no-repeat fixed;
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
 }
 
-/* Forest Overlay for depth */
+/* Fixed Forest Background - Does Not Scroll */
 body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/images/forest-background.svg') center center / cover no-repeat;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Fixed Forest Overlay for depth - Also Fixed */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: var(--overlay-dark);
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
 }
 
 /* Cinematic Text Animations */
@@ -120,6 +131,19 @@ body::before {
     50% {
         transform: translateY(-15px) scale(1.02);
     }
+}
+
+/* Main content wrapper - ensures content scrolls over fixed background */
+.header,
+.hero,
+.services,
+.portfolio,
+.about,
+.footer,
+main,
+section {
+    position: relative;
+    z-index: 1;
 }
 
 /* Liquid Glass Base Class */
