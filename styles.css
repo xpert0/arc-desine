@@ -215,12 +215,23 @@ body::before {
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-slow);
+    will-change: opacity, transform;
 }
 
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Enhanced animation classes for smoother effects */
+.scale-on-hover {
+    transition: all var(--transition-medium);
+    will-change: transform;
+}
+
+.scale-on-hover:hover {
+    transform: translateY(-10px) scale(1.05);
 }
 
 .scale-on-hover {

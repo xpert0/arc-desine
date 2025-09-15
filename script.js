@@ -46,7 +46,7 @@ function initHeaderScrollEffect() {
 
 // ===== FADE-IN ANIMATIONS ===== 
 function addFadeInAnimations() {
-    // Add fade-in class to main content sections
+    // Add fade-in class to main content sections and make them immediately visible for hero content
     const elementsToAnimate = document.querySelectorAll(`
         .hero-content, .service-card, .featured-item, 
         .about-content, .team-member, .stats-grid,
@@ -57,7 +57,23 @@ function addFadeInAnimations() {
     elementsToAnimate.forEach((element, index) => {
         element.classList.add('fade-in');
         element.style.animationDelay = `${index * 0.1}s`;
+        
+        // Make hero content immediately visible
+        if (element.closest('.hero') || element.classList.contains('hero-content')) {
+            setTimeout(() => {
+                element.classList.add('visible');
+            }, index * 100);
+        }
     });
+    
+    // Ensure all content is visible after a short delay as fallback
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in:not(.visible)').forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('visible');
+            }, index * 50);
+        });
+    }, 1000);
 }
 
 // ===== PARALLAX EFFECTS ===== 
@@ -77,8 +93,8 @@ function initParallaxEffects() {
 // ===== ENHANCED ANIMATION ON SCROLL ===== 
 function initAnimationOnScroll() {
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -20px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -106,6 +122,16 @@ function initAnimationOnScroll() {
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
+    
+    // Force visibility for elements already in viewport
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                el.classList.add('visible');
+            }
+        });
+    }, 500);
 }
 
 // ===== PORTFOLIO FILTER ===== 
