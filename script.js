@@ -48,9 +48,10 @@ function initHeaderScrollEffect() {
 function addFadeInAnimations() {
     // Add fade-in class to main content sections
     const elementsToAnimate = document.querySelectorAll(`
-        .hero-content, .service-item, .portfolio-item, 
-        .about-content, .team-member, .stats-item,
-        .contact-method, .form-group, .section-title
+        .hero-content, .service-card, .featured-item, 
+        .about-content, .team-member, .stats-grid,
+        .contact-method, .form-group, .section-title,
+        .hero-cta, .hero-description, .ceo-info
     `);
     
     elementsToAnimate.forEach((element, index) => {

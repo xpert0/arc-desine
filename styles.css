@@ -11,29 +11,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
 
 :root {
-    /* Dark Theme Colors */
-    --primary-color: #ff6b6b;
-    --primary-dark: #e85a5a;
-    --secondary-color: #4ecdc4;
-    --accent-color: #ffd93d;
-    --accent-purple: #a8e6cf;
-    --accent-pink: #ff8cc8;
-    --accent-orange: #ffab40;
+    /* Elegant Dark Theme Colors - Blue, Red, Black Focus */
+    --primary-color: #e53e3e;        /* Deep red */
+    --primary-dark: #c53030;
+    --secondary-color: #3182ce;      /* Blue */
+    --secondary-dark: #2c5282;
+    --accent-warm: #ed8936;          /* Warm orange */
+    --accent-cool: #4299e1;          /* Cool blue */
+    --accent-luxury: #d69e2e;        /* Gold accent */
+    --accent-neutral: #718096;       /* Gray */
     --text-primary: #ffffff;
-    --text-secondary: #b8c6db;
-    --text-light: #8892b0;
-    --text-accent: #64ffda;
-    --bg-primary: #0a0e27;
-    --bg-secondary: #1a1f3a;
-    --bg-accent: #2d3561;
-    --bg-card: rgba(26, 31, 58, 0.8);
-    --border-color: rgba(100, 255, 218, 0.2);
-    --shadow-light: 0 4px 20px rgba(255, 107, 107, 0.1);
-    --shadow-medium: 0 8px 40px rgba(78, 205, 196, 0.2);
-    --shadow-large: 0 20px 60px rgba(255, 217, 61, 0.1);
-    --gradient-primary: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #ffd93d 100%);
-    --gradient-secondary: linear-gradient(135deg, #a8e6cf 0%, #ff8cc8 50%, #ffab40 100%);
-    --gradient-dark: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    --text-secondary: #e2e8f0;
+    --text-light: #a0aec0;
+    --text-accent: #90cdf4;
+    --bg-primary: #0f0f23;           /* Deep dark blue */
+    --bg-secondary: #1a202c;         /* Dark gray-blue */
+    --bg-accent: #2d3748;            /* Medium gray */
+    --bg-card: rgba(26, 32, 44, 0.8);
+    --border-color: rgba(144, 205, 244, 0.2);
+    --shadow-light: 0 4px 20px rgba(229, 62, 62, 0.1);
+    --shadow-medium: 0 8px 40px rgba(49, 130, 206, 0.2);
+    --shadow-large: 0 20px 60px rgba(237, 137, 54, 0.1);
+    --gradient-primary: linear-gradient(135deg, #e53e3e 0%, #3182ce 100%);
+    --gradient-secondary: linear-gradient(135deg, #2c5282 0%, #ed8936 100%);
+    --gradient-warm: linear-gradient(135deg, #ed8936 0%, #e53e3e 50%, #d69e2e 100%);
+    --gradient-cool: linear-gradient(135deg, #3182ce 0%, #4299e1 50%, #90cdf4 100%);
+    --gradient-dark: linear-gradient(135deg, #0f0f23 0%, #1a202c 100%);
     
     /* Typography */
     --font-primary: 'Poppins', sans-serif;
@@ -79,9 +82,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(255, 217, 61, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(229, 62, 62, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(49, 130, 206, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(237, 137, 54, 0.1) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
     animation: backgroundPulse 10s ease-in-out infinite;
@@ -133,7 +136,7 @@ body::before {
 .particle-3 {
     width: 12px;
     height: 12px;
-    background: var(--accent-color);
+    background: var(--accent-luxury);
     top: 80%;
     left: 80%;
     animation-duration: 30s;
@@ -143,7 +146,7 @@ body::before {
 .particle-4 {
     width: 6px;
     height: 6px;
-    background: var(--accent-purple);
+    background: var(--accent-cool);
     top: 75%;
     left: 70%;
     animation-duration: 22s;
@@ -153,7 +156,7 @@ body::before {
 .particle-5 {
     width: 14px;
     height: 14px;
-    background: var(--accent-pink);
+    background: var(--accent-warm);
     top: 95%;
     left: 50%;
     animation-duration: 28s;
@@ -544,9 +547,9 @@ p {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255, 217, 61, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 10% 20%, rgba(229, 62, 62, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(49, 130, 206, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(237, 137, 54, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -633,7 +636,7 @@ p {
 .element-2 {
     width: 80px;
     height: 80px;
-    background: var(--gradient-secondary);
+    background: var(--gradient-cool);
     top: 200px;
     right: 80px;
     animation-delay: -2s;
@@ -642,24 +645,10 @@ p {
 .element-3 {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+    background: var(--gradient-warm);
     bottom: 100px;
     left: 120px;
     animation-delay: -4s;
-}
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    top: 150px;
-    right: 20px;
-    animation-delay: 2s;
-}
-
-.element-3 {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-    bottom: 20px;
-    left: 50px;
-    animation-delay: 4s;
 }
 
 .scroll-indicator {
@@ -685,8 +674,8 @@ p {
 .scroll-arrow {
     width: 24px;
     height: 24px;
-    border-right: 3px solid var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
+    border-right: 3px solid var(--accent-luxury);
+    border-bottom: 3px solid var(--accent-luxury);
     transform: rotate(45deg);
     animation: arrowBounce 2s ease-in-out infinite;
 }
@@ -733,8 +722,8 @@ p {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 70% 20%, rgba(168, 230, 207, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(255, 140, 200, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 70% 20%, rgba(67, 153, 225, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(237, 137, 54, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -779,7 +768,7 @@ p {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(from 0deg, transparent, rgba(255, 107, 107, 0.1), transparent, rgba(78, 205, 196, 0.1), transparent);
+    background: conic-gradient(from 0deg, transparent, rgba(229, 62, 62, 0.1), transparent, rgba(49, 130, 206, 0.1), transparent);
     animation: rotate 20s linear infinite;
     opacity: 0;
     transition: opacity var(--transition-medium);
