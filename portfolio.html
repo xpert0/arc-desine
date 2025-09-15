@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Arc Desine's portfolio of innovative architectural and interior design projects. From sustainable residential homes to cutting-edge commercial spaces.">
+    <meta name="keywords" content="architecture portfolio, interior design projects, Arc Desine work samples, sustainable buildings">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - Arc Desine Projects">
+    <meta property="og:description" content="Discover our award-winning architectural and interior design projects showcasing innovation and sustainability.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arc-desine.com/portfolio.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arc-desine.com/portfolio.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <title>Portfolio - Arc Desine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Arc Desine Home">
+                    <img src="assets/icons/logo.svg" alt="Arc Desine Logo" width="120" height="40">
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="portfolio.html" class="nav-link active" role="menuitem" aria-current="page">Portfolio</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Our Portfolio</h1>
+                <p class="page-subtitle">Showcasing excellence in architectural and interior design across residential, commercial, and institutional projects</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="portfolio-filter">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="interior">Interior Design</button>
+                    <button class="filter-btn" data-filter="sustainable">Sustainable</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid-section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <article class="portfolio-item" data-category="residential sustainable">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/sustainable-villa.jpg" alt="Modern sustainable villa with solar panels and green architecture" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Eco-Friendly Villa</h3>
+                                    <p>Sustainable Residential Design</p>
+                                    <a href="#project-1" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Eco-Friendly Villa</h3>
+                            <p class="portfolio-category">Residential • Sustainable</p>
+                            <p class="portfolio-description">A modern family home designed with net-zero energy consumption, featuring solar panels, rainwater harvesting, and sustainable materials throughout.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="portfolio-item" data-category="commercial">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/corporate-headquarters.jpg" alt="Modern corporate headquarters with glass facade" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Corporate Headquarters</h3>
+                                    <p>Commercial Architecture</p>
+                                    <a href="#project-2" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Corporate Headquarters</h3>
+                            <p class="portfolio-category">Commercial</p>
+                            <p class="portfolio-description">A 15-story corporate office building designed to promote collaboration and well-being, featuring open workspaces and abundant natural light.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="portfolio-item" data-category="interior residential">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/luxury-penthouse.jpg" alt="Luxury penthouse interior with modern furnishings" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Manhattan Penthouse</h3>
+                                    <p>Luxury Interior Design</p>
+                                    <a href="#project-3" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Manhattan Penthouse</h3>
+                            <p class="portfolio-category">Interior • Residential</p>
+                            <p class="portfolio-description">Complete interior renovation of a luxury penthouse, blending contemporary design with classic elegance and panoramic city views.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="portfolio-item" data-category="commercial sustainable">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/green-office-complex.jpg" alt="Green office complex with vertical gardens" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Green Office Complex</h3>
+                                    <p>Sustainable Commercial</p>
+                                    <a href="#project-4" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Green Office Complex</h3>
+                            <p class="portfolio-category">Commercial • Sustainable</p>
+                            <p class="portfolio-description">LEED Platinum certified office complex featuring vertical gardens, energy-efficient systems, and biophilic design principles.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="portfolio-item" data-category="residential">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/contemporary-home.jpg" alt="Contemporary family home with large windows" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Contemporary Family Home</h3>
+                                    <p>Modern Residential</p>
+                                    <a href="#project-5" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Contemporary Family Home</h3>
+                            <p class="portfolio-category">Residential</p>
+                            <p class="portfolio-description">A sleek family residence designed for modern living, featuring open floor plans, floor-to-ceiling windows, and seamless indoor-outdoor connections.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="portfolio-item" data-category="interior commercial">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/restaurant-design.jpg" alt="Modern restaurant interior with creative lighting" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Upscale Restaurant</h3>
+                                    <p>Hospitality Interior</p>
+                                    <a href="#project-6" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Upscale Restaurant</h3>
+                            <p class="portfolio-category">Interior • Commercial</p>
+                            <p class="portfolio-description">Complete interior design for a fine dining establishment, creating an atmosphere that enhances the culinary experience through thoughtful lighting and materials.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 7 -->
+                    <article class="portfolio-item" data-category="residential sustainable">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/passive-house.jpg" alt="Passive house design with excellent insulation" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Passive House Design</h3>
+                                    <p>Ultra-Efficient Home</p>
+                                    <a href="#project-7" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Passive House Design</h3>
+                            <p class="portfolio-category">Residential • Sustainable</p>
+                            <p class="portfolio-description">Certified Passive House meeting the highest energy efficiency standards, reducing energy consumption by 90% compared to typical buildings.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 8 -->
+                    <article class="portfolio-item" data-category="commercial">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/mixed-use-development.jpg" alt="Mixed-use development with retail and residential" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Mixed-Use Development</h3>
+                                    <p>Urban Planning</p>
+                                    <a href="#project-8" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Mixed-Use Development</h3>
+                            <p class="portfolio-category">Commercial</p>
+                            <p class="portfolio-description">A vibrant mixed-use development combining retail, office, and residential spaces to create a dynamic urban community.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 9 -->
+                    <article class="portfolio-item" data-category="interior">
+                        <div class="portfolio-image">
+                            <img src="assets/samples/wellness-spa.jpg" alt="Tranquil spa interior with natural materials" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Wellness Spa Interior</h3>
+                                    <p>Hospitality Design</p>
+                                    <a href="#project-9" class="portfolio-link">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Wellness Spa Interior</h3>
+                            <p class="portfolio-category">Interior</p>
+                            <p class="portfolio-description">Serene spa interior designed to promote relaxation and wellness, featuring natural materials, soft lighting, and biophilic elements.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Stats -->
+        <section class="project-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label">Awards Won</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="design-process">
+            <div class="container">
+                <h2 class="section-title">Our Design Process</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Discovery & Consultation</h3>
+                            <p>We begin by understanding your vision, needs, and project requirements through comprehensive consultation sessions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Concept Development</h3>
+                            <p>Our team develops initial concepts and design directions, exploring creative solutions that align with your goals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Design Refinement</h3>
+                            <p>We refine the chosen concept through collaborative feedback, ensuring every detail meets your expectations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Documentation</h3>
+                            <p>Detailed drawings, specifications, and documentation are prepared for seamless project implementation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3>Project Management</h3>
+                            <p>We oversee the construction and implementation process to ensure quality and adherence to design intent.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">06</div>
+                        <div class="step-content">
+                            <h3>Completion & Support</h3>
+                            <p>Final walkthrough, project handover, and ongoing support to ensure your complete satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="portfolio-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's create something extraordinary together. Contact us to discuss your vision and begin the journey toward exceptional design.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                        <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/icons/logo.svg" alt="Arc Desine Logo" width="120" height="40">
+                    <p class="footer-tagline">Designing the future, one space at a time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                            <img src="assets/icons/instagram.svg" alt="" width="24" height="24">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn">
+                            <img src="assets/icons/linkedin.svg" alt="" width="24" height="24">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Behance">
+                            <img src="assets/icons/behance.svg" alt="" width="24" height="24">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="portfolio.html">Architecture</a></li>
+                        <li><a href="portfolio.html">Interior Design</a></li>
+                        <li><a href="portfolio.html">Consulting</a></li>
+                        <li><a href="portfolio.html">Project Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <address class="contact-info">
+                        <p>123 Design Avenue<br>Creative District, NY 10001</p>
+                        <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                        <p><a href="mailto:hello@arc-desine.com">hello@arc-desine.com</a></p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arc Desine. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -8,10 +8,48 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initFormValidation();
     initImageLazyLoading();
+    initPortfolioFilter();
     
     // Add loading state management
     document.body.classList.add('loaded');
 });
+
+// ===== PORTFOLIO FILTER ===== 
+function initPortfolioFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    if (!filterButtons.length || !portfolioItems.length) return;
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter portfolio items
+            portfolioItems.forEach(item => {
+                const categories = item.getAttribute('data-category').split(' ');
+                
+                if (filter === 'all' || categories.includes(filter)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
 
 // ===== MOBILE NAVIGATION ===== 
 function initMobileNavigation() {
