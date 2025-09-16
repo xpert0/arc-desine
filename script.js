@@ -8,8 +8,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+<<<<<<< HEAD
 // Make initMainSite globally available for loading screen callback
 window.initMainSite = function() {
+=======
+function initLoadingScreen() {
+    const welcomeText = document.getElementById('welcome-text');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const mainContent = document.getElementById('main-content');
+    const text = "Welcome to the world of creativity";
+    
+    let currentIndex = 0;
+    
+    function typeWelcomeText() {
+        if (currentIndex < text.length) {
+            welcomeText.innerHTML += text[currentIndex];
+            currentIndex++;
+            setTimeout(typeWelcomeText,80);
+        } else {
+            setTimeout(() => {
+                loadingOverlay.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    initMainSite();
+                }, 1000);
+            }, 1000);
+        }
+    }
+    
+    typeWelcomeText();
+}
+
+function initMainSite() {
+>>>>>>> 422a041 (final)
     initNavigation();
     initScrollAnimations();
     initSmoothScrolling();
@@ -237,7 +269,7 @@ function initFloatingElements() {
 }
 
 function initTypingEffect() {
-    const heroTitle = document.querySelector('.hero-title');
+    // const heroTitle = document.querySelector('.hero-title');
     if (!heroTitle) return;
     
     const originalText = heroTitle.innerHTML;
