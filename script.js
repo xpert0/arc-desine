@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
+    initLoadingScreen();
+});
+
+function initLoadingScreen() {
+    const welcomeText = document.getElementById('welcome-text');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const mainContent = document.getElementById('main-content');
+    const text = "Welcome to the world of creativity";
+    
+    let currentIndex = 0;
+    
+    function typeWelcomeText() {
+        if (currentIndex < text.length) {
+            welcomeText.innerHTML += text[currentIndex];
+            currentIndex++;
+            setTimeout(typeWelcomeText, 80);
+        } else {
+            setTimeout(() => {
+                loadingOverlay.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    initMainSite();
+                }, 1000);
+            }, 1000);
+        }
+    }
+    
+    typeWelcomeText();
+}
+
+function initMainSite() {
     initNavigation();
     initScrollAnimations();
     initSmoothScrolling();
@@ -6,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParallaxEffects();
     initFloatingElements();
     initTypingEffect();
-});
+}
 
 function initNavigation() {
     const navbar = document.getElementById('navbar');

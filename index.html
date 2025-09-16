@@ -50,8 +50,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- bg -->
-    <div class="fixed-background"></div>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <h1 id="welcome-text" class="welcome-text"></h1>
+        </div>
+    </div>
+    
+    <!-- Main Content (initially hidden) -->
+    <div id="main-content" class="main-content" style="display: none;">
+        <!-- bg -->
+        <div class="fixed-background"></div>
     
     <!-- nav -->
     <nav class="glass-nav" id="navbar">
@@ -270,6 +279,8 @@
             </div>
         </div>
     </footer>
+    
+    </div> <!-- End main-content -->
 
     <script src="script.js"></script>
 </body>
