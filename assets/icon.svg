@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4e99b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8941f;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="bgGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    <filter id="iconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" ry="12" fill="url(#bgGradient)"/>
+  
+  <!-- Main arc symbol -->
+  <path d="M 16 48 Q 32 12 48 48" stroke="url(#iconGradient)" stroke-width="3" fill="none" filter="url(#iconGlow)"/>
+  <path d="M 20 42 L 44 42" stroke="url(#iconGradient)" stroke-width="2.5" filter="url(#iconGlow)"/>
+  
+  <!-- Geometric accents -->
+  <polygon points="12,52 18,46 24,52" fill="url(#iconGradient)" opacity="0.8"/>
+  <polygon points="40,52 46,46 52,52" fill="url(#iconGradient)" opacity="0.8"/>
+  
+  <!-- Center diamond -->
+  <polygon points="32,35 36,31 32,27 28,31" fill="url(#iconGradient)" opacity="0.6"/>
+  
+  <!-- Corner sparkles -->
+  <circle cx="12" cy="12" r="1" fill="url(#iconGradient)" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52" cy="12" r="1" fill="url(#iconGradient)" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52" cy="52" r="1" fill="url(#iconGradient)" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

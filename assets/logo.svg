@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4e99b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8941f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logoShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle for logo mark -->
+  <circle cx="40" cy="50" r="35" fill="url(#logoShadow)" opacity="0.1"/>
+  
+  <!-- Arc symbol - stylized 'a' -->
+  <path d="M 20 70 Q 40 15 60 70" stroke="url(#goldGradient)" stroke-width="4" fill="none" filter="url(#glow)"/>
+  <path d="M 25 60 L 55 60" stroke="url(#goldGradient)" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Geometric accent -->
+  <polygon points="15,75 25,65 35,75" fill="url(#goldGradient)" opacity="0.7"/>
+  <polygon points="45,75 55,65 65,75" fill="url(#goldGradient)" opacity="0.7"/>
+  
+  <!-- Company name -->
+  <text x="90" y="40" font-family="'Playfair Display', serif" font-size="24" font-weight="600" fill="url(#goldGradient)" filter="url(#glow)">arc</text>
+  <text x="90" y="65" font-family="'Playfair Display', serif" font-size="20" font-weight="400" fill="url(#goldGradient)" opacity="0.9">Desine</text>
+  
+  <!-- Tagline -->
+  <text x="200" y="45" font-family="'Crimson Text', serif" font-size="10" font-style="italic" fill="url(#goldGradient)" opacity="0.8">Premium</text>
+  <text x="200" y="58" font-family="'Crimson Text', serif" font-size="10" font-style="italic" fill="url(#goldGradient)" opacity="0.8">Graphics</text>
+  <text x="200" y="71" font-family="'Crimson Text', serif" font-size="10" font-style="italic" fill="url(#goldGradient)" opacity="0.8">Design</text>
+  
+  <!-- Decorative line -->
+  <line x1="85" y1="75" x2="260" y2="75" stroke="url(#goldGradient)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Sparkle effects -->
+  <circle cx="70" cy="25" r="1.5" fill="url(#goldGradient)" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="30" r="1" fill="url(#goldGradient)" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="35" r="1.2" fill="url(#goldGradient)" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
