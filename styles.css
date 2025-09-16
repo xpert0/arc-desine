@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: "Times New Roman", "Times", "Georgia", serif;
+    font-family: "Times New Roman", "Times", serif;
     line-height: 1.6;
     color: #d4af37;
     background: #0a0a0a;
@@ -135,7 +135,7 @@ body {
 }
 
 .welcome-text {
-    font-family: "Times New Roman", "Times", "Georgia", serif;
+    font-family: "Times New Roman", "Times", serif;
     font-size: 3.5rem;
     font-weight: 700;
     color: #d4af37;
@@ -227,7 +227,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Times New Roman", "Times", "Georgia", serif;
+    font-family: "Times New Roman", "Times", serif;
     font-weight: 600;
     color: #d4af37;
     margin-bottom: 1rem;
