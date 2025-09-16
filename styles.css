@@ -1,5 +1,4 @@
-/* Import elegant fonts */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap');
+/* Web-safe elegant fonts */
 
 /* CSS Reset and Base Styles */
 * {
@@ -14,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Crimson Text', serif;
+    font-family: "Times New Roman", "Times", "Georgia", serif;
     line-height: 1.6;
     color: #d4af37;
     background: #0a0a0a;
@@ -136,7 +135,7 @@ body {
 }
 
 .welcome-text {
-    font-family: 'Playfair Display', serif;
+    font-family: "Times New Roman", "Times", "Georgia", serif;
     font-size: 3.5rem;
     font-weight: 700;
     color: #d4af37;
@@ -228,7 +227,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Times New Roman", "Times", "Georgia", serif;
     font-weight: 600;
     color: #d4af37;
     margin-bottom: 1rem;
@@ -639,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     color: #d4af37;
     font-size: 1rem;
-    font-family: 'Crimson Text', serif;
+    font-family: "Times New Roman", "Times", "Georgia", serif;
     transition: all 0.3s ease;
 }
 

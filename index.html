@@ -8,18 +8,93 @@
     <meta name="keywords" content="graphics design, visual design, branding, logo design, creative agency, arkadip maiti, arc desine">
     <meta name="author" content="arc Desine">
     <meta name="robots" content="index, follow">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://linkedin.com">
+    <link rel="preconnect" href="https://twitter.com">
+    
+    <!-- Critical CSS inlined for faster render -->
+    <style>
+        /* Critical CSS for immediate rendering */
+        body { 
+            margin: 0; 
+            background: #0a0a0a; 
+            color: #d4af37; 
+            font-family: "Times New Roman", "Times", "Georgia", serif;
+            overflow-x: hidden;
+        }
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #0a0a0a;
+            background-image: url('assets/bg.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+        .main-content { display: none; }
+        .welcome-text {
+            font-family: "Times New Roman", "Times", "Georgia", serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #d4af37;
+            text-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+            margin: 0;
+            line-height: 1.2;
+            text-align: center;
+        }
+        .loading-content {
+            text-align: center;
+            position: relative;
+            z-index: 10001;
+        }
+        .loading-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+            .welcome-text { font-size: 2.5rem; }
+        }
+    </style>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <!-- Favicon with cache headers -->
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="arc Desine - Premium Graphics Design Company">
     <meta property="og:description" content="Premium graphics design company specializing in visual design, branding, and creative solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arc-desine.com">
     <meta property="og:image" content="assets/logo.svg">
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="arc Desine - Premium Graphics Design Company">
     <meta name="twitter:description" content="Premium graphics design company specializing in visual design, branding, and creative solutions.">
     <meta name="twitter:image" content="assets/logo.svg">
-    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
     
-    <!-- Schema.org -->
+    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -46,8 +121,6 @@
         }
     }
     </script>
-    
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Loading Overlay -->
@@ -282,6 +355,7 @@
     
     </div> <!-- End main-content -->
 
+    <!-- JavaScript loaded synchronously for critical loading screen functionality -->
     <script src="script.js"></script>
 </body>
 </html>
