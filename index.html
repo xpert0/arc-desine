@@ -36,8 +36,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 1;
-            transition: opacity 1s ease-out;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
         .main-content { display: none; }
         .welcome-text {
@@ -353,7 +353,39 @@
     
     </div> <!-- End main-content -->
 
-    <!-- JavaScript loaded synchronously for critical loading screen functionality -->
-    <script src="script.js"></script>
+    <!-- Critical loading functionality embedded directly to avoid render blocking -->
+    <script>
+        // Critical loading screen functionality - no external dependencies
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeText = document.getElementById('welcome-text');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const mainContent = document.getElementById('main-content');
+            
+            // Set static text immediately
+            welcomeText.textContent = "Welcome to the world of creativity";
+            
+            // Fade in overlay slowly
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '1';
+            }, 100);
+            
+            // Show for 1.5 seconds, then fade out slowly
+            setTimeout(() => {
+                loadingOverlay.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    // Load non-critical script after main content is visible
+                    if (window.initMainSite) {
+                        window.initMainSite();
+                    }
+                }, 1000);
+            }, 1500);
+        });
+    </script>
+
+    <!-- Non-critical JavaScript loaded asynchronously -->
+    <script async src="script.js"></script>
 </body>
 </html>

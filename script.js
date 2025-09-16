@@ -1,36 +1,15 @@
+// arc Desine - Non-critical JavaScript functionality
+// This script loads asynchronously after the loading screen completes
+
 document.addEventListener('DOMContentLoaded', function() {
-    initLoadingScreen();
+    // Only initialize if not already done by loading screen
+    if (document.getElementById('main-content').style.display === 'block') {
+        initMainSite();
+    }
 });
 
-function initLoadingScreen() {
-    const welcomeText = document.getElementById('welcome-text');
-    const loadingOverlay = document.getElementById('loading-overlay');
-    const mainContent = document.getElementById('main-content');
-    const text = "Welcome to the world of creativity";
-    
-    let currentIndex = 0;
-    
-    function typeWelcomeText() {
-        if (currentIndex < text.length) {
-            welcomeText.innerHTML += text[currentIndex];
-            currentIndex++;
-            setTimeout(typeWelcomeText, 80);
-        } else {
-            setTimeout(() => {
-                loadingOverlay.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingOverlay.style.display = 'none';
-                    mainContent.style.display = 'block';
-                    initMainSite();
-                }, 1000);
-            }, 1000);
-        }
-    }
-    
-    typeWelcomeText();
-}
-
-function initMainSite() {
+// Make initMainSite globally available for loading screen callback
+window.initMainSite = function() {
     initNavigation();
     initScrollAnimations();
     initSmoothScrolling();
@@ -38,7 +17,7 @@ function initMainSite() {
     initParallaxEffects();
     initFloatingElements();
     initTypingEffect();
-}
+};
 
 function initNavigation() {
     const navbar = document.getElementById('navbar');
