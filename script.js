@@ -1,8 +1,4 @@
-// arc Desine - Premium Graphics Design Company
-// JavaScript for animations and interactions
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
     initNavigation();
     initScrollAnimations();
     initSmoothScrolling();
@@ -12,13 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
 });
 
-// Navigation functionality
 function initNavigation() {
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Navbar scroll effect
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
             navbar.style.background = 'rgba(10, 10, 10, 0.95)';
@@ -29,7 +23,6 @@ function initNavigation() {
         }
     });
     
-    // Active navigation link highlighting
     window.addEventListener('scroll', function() {
         const sections = document.querySelectorAll('section[id]');
         const scrollPosition = window.scrollY + 200;
@@ -50,7 +43,6 @@ function initNavigation() {
         });
     });
     
-    // Mobile navigation toggle
     if (navToggle) {
         navToggle.addEventListener('click', function() {
             const navLinksContainer = document.querySelector('.nav-links');
@@ -60,7 +52,6 @@ function initNavigation() {
     }
 }
 
-// Smooth scrolling for navigation links
 function initSmoothScrolling() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -82,7 +73,6 @@ function initSmoothScrolling() {
     });
 }
 
-// Scroll animations with Intersection Observer
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -98,7 +88,6 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
-    // Observe all animated elements
     const animatedElements = document.querySelectorAll(
         '.animate-fade-in, .animate-slide-up, .animate-scale'
     );
@@ -109,7 +98,6 @@ function initScrollAnimations() {
     });
 }
 
-// Contact form functionality
 function initContactForm() {
     const contactForm = document.querySelector('.contact-form');
     
@@ -117,14 +105,12 @@ function initContactForm() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
             
-            // Basic validation
             if (!name || !email || !subject || !message) {
                 showNotification('Please fill in all fields', 'error');
                 return;
@@ -135,14 +121,12 @@ function initContactForm() {
                 return;
             }
             
-            // Simulate form submission
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            // Simulate API call
             setTimeout(() => {
                 showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
                 this.reset();
@@ -153,21 +137,17 @@ function initContactForm() {
     }
 }
 
-// Email validation helper
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Notification system
 function showNotification(message, type) {
-    // Remove existing notification
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         existingNotification.remove();
     }
     
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
@@ -177,7 +157,6 @@ function showNotification(message, type) {
         </div>
     `;
     
-    // Add styles
     notification.style.cssText = `
         position: fixed;
         top: 100px;
@@ -194,17 +173,14 @@ function showNotification(message, type) {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     `;
     
-    // Add to DOM
     document.body.appendChild(notification);
     
-    // Close button functionality
     const closeButton = notification.querySelector('.notification-close');
     closeButton.addEventListener('click', () => {
         notification.style.animation = 'slideOutRight 0.3s ease';
         setTimeout(() => notification.remove(), 300);
     });
     
-    // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
             notification.style.animation = 'slideOutRight 0.3s ease';
@@ -213,7 +189,6 @@ function showNotification(message, type) {
     }, 5000);
 }
 
-// Parallax effects for floating elements
 function initParallaxEffects() {
     const floatingElements = document.querySelectorAll('.floating-element');
     
@@ -228,19 +203,16 @@ function initParallaxEffects() {
     });
 }
 
-// Enhanced floating elements animation
 function initFloatingElements() {
     const floatingElements = document.querySelectorAll('.floating-element');
     
     floatingElements.forEach((element, index) => {
-        // Random initial position variation
         const randomX = Math.random() * 20 - 10;
         const randomY = Math.random() * 20 - 10;
         
         element.style.setProperty('--random-x', randomX + 'px');
         element.style.setProperty('--random-y', randomY + 'px');
         
-        // Add mouse interaction
         element.addEventListener('mouseenter', function() {
             this.style.transform = `scale(1.2) translateX(var(--random-x)) translateY(var(--random-y))`;
             this.style.background = 'rgba(212, 175, 55, 0.2)';
@@ -253,7 +225,6 @@ function initFloatingElements() {
     });
 }
 
-// Typing effect for hero title
 function initTypingEffect() {
     const heroTitle = document.querySelector('.hero-title');
     if (!heroTitle) return;
@@ -270,7 +241,7 @@ function initTypingEffect() {
         heroTitle.innerHTML = '';
         
         let currentIndex = 0;
-        let currentPhase = 0; // 0: first part, 1: second part, 2: remaining part
+        let currentPhase = 0;
         
         function typeText() {
             if (currentPhase === 0) {
@@ -305,32 +276,26 @@ function initTypingEffect() {
             }
         }
         
-        // Start typing effect after a delay
         setTimeout(typeText, 1000);
     }
 }
 
-// Portfolio item interactions
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
     portfolioItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Add click animation
             this.style.transform = 'scale(0.98)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
             
-            // Could expand to show modal with more details
             const title = this.querySelector('.portfolio-overlay h3').textContent;
             console.log(`Clicked on portfolio item: ${title}`);
-            // showPortfolioModal(this);
         });
     });
 });
 
-// Service card hover effects
 document.addEventListener('DOMContentLoaded', function() {
     const serviceCards = document.querySelectorAll('.service-card');
     
@@ -353,7 +318,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Performance optimization - lazy loading for images
 function initLazyLoading() {
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -372,7 +336,6 @@ function initLazyLoading() {
     }
 }
 
-// Add CSS animations keyframes dynamically
 function addCustomAnimations() {
     const style = document.createElement('style');
     style.textContent = `
@@ -428,38 +391,28 @@ function addCustomAnimations() {
     document.head.appendChild(style);
 }
 
-// Initialize custom animations
 addCustomAnimations();
 
-// Smooth scrolling polyfill for older browsers
 if (!('scrollBehavior' in document.documentElement.style)) {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/gh/iamdustan/smoothscroll@1.4.10/src/smoothscroll.js';
     document.head.appendChild(script);
 }
 
-// Error handling for missing elements
 window.addEventListener('error', function(e) {
     console.log('An error occurred:', e.error);
-    // Could implement error reporting here
 });
 
-// Page visibility API for performance optimization
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-        // Pause animations when page is not visible
         document.body.classList.add('page-hidden');
     } else {
-        // Resume animations when page becomes visible
         document.body.classList.remove('page-hidden');
     }
 });
 
-// Add loading state management
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    
-    // Remove any loading spinners or overlays
     const loader = document.querySelector('.loader');
     if (loader) {
         loader.style.opacity = '0';
@@ -467,7 +420,6 @@ window.addEventListener('load', function() {
     }
 });
 
-// Console branding
 console.log(
     '%c🎨 arc Desine - Premium Graphics Design Company',
     'color: #d4af37; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);'
