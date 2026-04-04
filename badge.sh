@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-ROOT="${BUILD_OUTPUT_DIR:-./dist}"
-
 INJECT='<script src="/static/badge.js" defer></script>'
 
 echo "Injecting badge script into HTML files in $ROOT"
 
-find "$ROOT" -type f -name "*.html" | while read -r file; do
+find ./ -type f -name "*.html" | while read -r file; do
 
   # Skip if already injected
   if grep -q "/static/badge.js" "$file"; then
